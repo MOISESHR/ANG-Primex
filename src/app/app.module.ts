@@ -19,6 +19,7 @@ import { ClientsComponent } from './vistas/clients/clients.component';
 import { TypographyComponent } from './vistas/typography/typography.component';
 import { ContactComponent } from './vistas/contact/contact.component';
 import { JobComponent } from './vistas/job/job.component';
+import { PortfolioSingleComponent } from './vistas/portfolio-single/portfolio-single.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { JobComponent } from './vistas/job/job.component';
     ClientsComponent,
     TypographyComponent,
     ContactComponent,
-    JobComponent
+    JobComponent,
+    PortfolioSingleComponent
   ],
   imports: [
     BrowserModule,

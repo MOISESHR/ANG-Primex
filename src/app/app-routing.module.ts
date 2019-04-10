@@ -13,7 +13,8 @@ import { ClientsComponent } from './vistas/clients/clients.component';
 import { FaqComponent } from './vistas/faq/faq.component';
 import { TypographyComponent } from './vistas/typography/typography.component';
 import { ContactComponent } from './vistas/contact/contact.component';
-
+import { PortfolioSingleComponent } from './vistas/portfolio-single/portfolio-single.component';
+/*
 const routes: Routes = [
   {
     path: 'inicio', children: [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'portfolio-four', component: PortfolioFourColComponent },
   { path: 'portfolio-three', component: PortfolioThreeColComponent },
   { path: 'portfolio-two', component: PortfolioTwoColComponent },
+  { path: 'portfolio-single', component: PortfolioSingleComponent },
 
   { path: 'job', component: JobComponent },
   { path: 'clients', component: ClientsComponent },
@@ -35,6 +37,29 @@ const routes: Routes = [
   { path: 'typography', component: TypographyComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'inicio', pathMatch: 'full' }
+];
+*/
+const routes: Routes = [
+  {
+    path: '', pathMatch:"full", children: [
+      { path: '', component: PagInicioComponent, pathMatch: 'full' },
+      { path: 'edit/:id', component: PagInicioComponent }
+    ]
+  },
+  { path: 'acerca-de-nosotros', component: PagAcercaNosotrosComponent },
+  { path: 'acerca-de-mi', component: PagAcercaMiComponent },
+  { path: 'blog-standard', component: BlogStandardComponent },
+  { path: 'blog-single', component: BlogSingleComponent },
+  { path: 'portfolio-four', component: PortfolioFourColComponent },
+  { path: 'portfolio-three', component: PortfolioThreeColComponent },
+  { path: 'portfolio-two', component: PortfolioTwoColComponent },
+  { path: 'portfolio-single', component: PortfolioSingleComponent },
+
+  { path: 'job', component: JobComponent },
+  { path: 'clients', component: ClientsComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'typography', component: TypographyComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
